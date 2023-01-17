@@ -1,6 +1,4 @@
-# kill process killmenow
-
-exec { 'kill':
-  command  => 'pkill -f killmenow',
-  path  => ['/usr/bin', '/usr/sbin'],
+# Executes a command
+exec { 'pkill killmenow':
+  path => '/usr/bin:/usr/sbin:/bin'
 }
